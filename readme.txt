@@ -14,7 +14,7 @@ Show All Categories in Verticall Drop&down menu.
  * You Can Change Direction
  * You Can Select 12 theme
  
- <a href="http://pctricks.ir/">Live Demo</a>
+ <a href="http://pctricks.ir/" rel="follow">Live Demo</a>
 
 == Installation ==
 
@@ -23,11 +23,11 @@ Show All Categories in Verticall Drop&down menu.
 3. Go to widget and Drag&Drop Vertical menu widget in You theme Position.
 
 == Frequently Asked Questions ==
-
+<a href="http://pctricks.ir/community" rel="follow" >Community</a>
 
 == Screenshots ==
 
-<a href="http://pctricks.ir/vmenu.html">Screens</a>
+<a href="http://pctricks.ir/vmenu.html" rel="follow" >Screens</a>
 
 == Changelog ==
 
