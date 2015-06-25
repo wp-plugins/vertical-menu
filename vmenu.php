@@ -3,7 +3,7 @@
 Plugin Name: Vertical menu
 Plugin URI: http://ctboard.com/
 Description: This Plugin Show All Categories In Vertical menu Widget.
-Version: 1.0.4
+Version: 1.1.3
 Author: <a href="http://ctboard.com/">Mostafa Shiraali</a>
 Author URI: http://ctboard.com/
 License: A "Slug" license name e.g. GPL2
@@ -61,8 +61,8 @@ public static function display_options()
 		<td><span class="description"><?php _e("Select Menu Direction","vmenu")?></span></td>
 		<td>
 		<select name="vmw_dir">
-		<option value="rtl" <?php if ( get_option('vmw_dir') == "rtl" ) echo 'selected="selected"'; ?>>Right To Left</option>
-		<option value="ltr" <?php if ( get_option('vmw_dir') == "ltr" ) echo 'selected="selected"'; ?>>Left To Right</option>
+		<option value="rtl" <?php if ( get_option('vmw_dir') == "rtl" ) echo 'selected="selected"'; ?>><?php _e("Right To Left","vmenu");?></option>
+		<option value="ltr" <?php if ( get_option('vmw_dir') == "ltr" ) echo 'selected="selected"'; ?>><?php _e("Left To Right","vmenu");?></option>
 		</select>
 		</td>
         </tr>	
@@ -71,19 +71,19 @@ public static function display_options()
 		<td><span class="description"><?php _e("Select Menu theme","vmenu")?></span></td>
 		<td>
 		<select name="vmw_theme">
-		<option value="defualt" <?php if ( get_option('vmw_theme') == "defualt" ) echo 'selected="selected"'; ?>>defualt</option>
-		<option value="boove" <?php if ( get_option('vmw_theme') == "boove" ) echo 'selected="selected"'; ?>>Bootstrap-vertival</option>
-		<option value="blor" <?php if ( get_option('vmw_theme') == "blor" ) echo 'selected="selected"'; ?>>Black-Orange</option>
-		<option value="blgr" <?php if ( get_option('vmw_theme') == "blgr" ) echo 'selected="selected"'; ?>>Black-Green</option>
-		<option value="blblu" <?php if ( get_option('vmw_theme') == "blblu" ) echo 'selected="selected"'; ?>>Black-Blue</option>
-		<option value="blye" <?php if ( get_option('vmw_theme') == "blye" ) echo 'selected="selected"'; ?>>Black-Yellow</option>
-		<option value="blpi" <?php if ( get_option('vmw_theme') == "blpi" ) echo 'selected="selected"'; ?>>Black-Pink</option>
-		<option value="cgb" <?php if ( get_option('vmw_theme') == "cgb" ) echo 'selected="selected"'; ?>>CSS3-Gray-Blue</option>
-		<option value="cggr" <?php if ( get_option('vmw_theme') == "cggr" ) echo 'selected="selected"'; ?>>CSS3-Gray-green</option>
-		<option value="cgye" <?php if ( get_option('vmw_theme') == "cgye" ) echo 'selected="selected"'; ?>>CSS3-Gray-Yellow</option>
-		<option value="cgr" <?php if ( get_option('vmw_theme') == "cgr" ) echo 'selected="selected"'; ?>>CSS3-Gray-red</option>
-		<option value="cbgr" <?php if ( get_option('vmw_theme') == "cbgr" ) echo 'selected="selected"'; ?>>CSS3-Black-Green</option>
-		<option value="turq" <?php if ( get_option('vmw_theme') == "turq" ) echo 'selected="selected"'; ?>>Turquoise</option>
+		<option value="defualt" <?php if ( get_option('vmw_theme') == "defualt" ) echo 'selected="selected"'; ?>><?php _e("Defualt","vmenu");?></option>
+		<option value="accor" <?php if ( get_option('vmw_theme') == "accor" ) echo 'selected="selected"'; ?>><?php _e("Simple Accordion","vmenu");?></option>
+		<option value="blor" <?php if ( get_option('vmw_theme') == "blor" ) echo 'selected="selected"'; ?>><?php _e("Black-Orange","vmenu");?></option>
+		<option value="blgr" <?php if ( get_option('vmw_theme') == "blgr" ) echo 'selected="selected"'; ?>><?php _e("Black-Green","vmenu");?></option>
+		<option value="blblu" <?php if ( get_option('vmw_theme') == "blblu" ) echo 'selected="selected"'; ?>><?php _e("Black-Blue","vmenu");?></option>
+		<option value="blye" <?php if ( get_option('vmw_theme') == "blye" ) echo 'selected="selected"'; ?>><?php _e("Black-Yellow","vmenu");?></option>
+		<option value="blpi" <?php if ( get_option('vmw_theme') == "blpi" ) echo 'selected="selected"'; ?>><?php _e("Black-Pink","vmenu");?></option>
+		<option value="cgb" <?php if ( get_option('vmw_theme') == "cgb" ) echo 'selected="selected"'; ?>><?php _e("CSS3-Gray-Blue","vmenu");?></option>
+		<option value="cggr" <?php if ( get_option('vmw_theme') == "cggr" ) echo 'selected="selected"'; ?>><?php _e("CSS3-Gray-green","vmenu");?></option>
+		<option value="cgye" <?php if ( get_option('vmw_theme') == "cgye" ) echo 'selected="selected"'; ?>><?php _e("CSS3-Gray-Yellow","vmenu");?></option>
+		<option value="cgr" <?php if ( get_option('vmw_theme') == "cgr" ) echo 'selected="selected"'; ?>><?php _e("CSS3-Gray-red","vmenu");?></option>
+		<option value="cbgr" <?php if ( get_option('vmw_theme') == "cbgr" ) echo 'selected="selected"'; ?>><?php _e("CSS3-Black-Green","vmenu");?></option>
+		<option value="turq" <?php if ( get_option('vmw_theme') == "turq" ) echo 'selected="selected"'; ?>><?php _e("Turquoise","vmenu");?></option>
 		</select>
 		</td>
         </tr>	
@@ -106,11 +106,30 @@ public static function sublevel($catid)
 {
 global $wpdb;
 $subs='';
+$vmw_theme=get_option('vmw_theme');
 $cat_tax = $wpdb->get_results("SELECT $wpdb->term_taxonomy.term_id,$wpdb->terms.name
 									FROM $wpdb->term_taxonomy
 									INNER JOIN $wpdb->terms
 									WHERE $wpdb->term_taxonomy.term_id=$wpdb->terms.term_id AND $wpdb->term_taxonomy.taxonomy = 'category' AND $wpdb->term_taxonomy.parent = $catid
 									ORDER BY $wpdb->terms.name ASC");
+			if($vmw_theme="accor")
+			{
+			foreach($cat_tax as $cat)
+			{
+			$catlink=esc_url(get_category_link($cat->term_id));
+			$parent = $wpdb->get_results("SELECT * FROM $wpdb->term_taxonomy WHERE taxonomy = 'category' AND parent = $cat->term_id");
+			if($parent)
+			{
+			$subs .='<li><a href="'.$catlink.'">'.$cat->name.'</a></li>'.VerticalMenu::sublevel($cat->term_id);
+			}
+			else
+			{
+			$subs .='<li><a href="'.$catlink.'">'.$cat->name.'</a></li>';
+			}
+			}
+			}
+			else
+			{
 			foreach($cat_tax as $cat)
 			{
 			$catlink=esc_url(get_category_link($cat->term_id));
@@ -121,12 +140,12 @@ $cat_tax = $wpdb->get_results("SELECT $wpdb->term_taxonomy.term_id,$wpdb->terms.
 			$subs .='<a href="'.$catlink.'">'.$cat->name.'</a><ul class="sub-menu">';
 			$subs .=VerticalMenu::sublevel($cat->term_id);
 			$subs .='</ul></li>';
-			$level=$level+1;
 			}
 			else
 			{
 			$subs .='<li><a href="'.$catlink.'">'.$cat->name.'</a></li>';
 			$level=$level+1;
+			}
 			}
 			}
 
@@ -140,12 +159,39 @@ public static function widget()
 {
 global $wpdb;
 $menu='';
-$menu .='<div id="navigation"><ul>';
+$vmw_theme=get_option('vmw_theme');
+			if($vmw_theme="accor")
+			{
+			$menu .='<div id="navigation">';
+			}
+			else
+			{
+			$menu .='<div id="navigation"><ul>';
+			}
  $cat_tax = $wpdb->get_results("SELECT $wpdb->term_taxonomy.term_id,$wpdb->terms.name
 										FROM $wpdb->term_taxonomy
 										INNER JOIN $wpdb->terms
 										WHERE $wpdb->term_taxonomy.term_id=$wpdb->terms.term_id AND $wpdb->term_taxonomy.taxonomy = 'category' AND $wpdb->term_taxonomy.parent = '0'
 										ORDER BY $wpdb->terms.name ASC");	
+			if($vmw_theme="accor")
+			{
+			foreach ($cat_tax as $cat)
+			{
+			$catlink=esc_url(get_category_link($cat->term_id));
+			$parent = $wpdb->get_results("SELECT * FROM $wpdb->term_taxonomy WHERE taxonomy = 'category' AND parent = $cat->term_id");
+			if($parent)
+			{
+			$menu .='<ul id="'.$cat->term_id.'"><li><a href="#'.$cat->term_id.'" id="'.$catlink.'">'.$cat->name.'</a></li><li><a href="'.$catlink.'">'.$cat->name.'</a></li>'.VerticalMenu::sublevel($cat->term_id).'</ul>';
+			}
+			else
+			{
+			$menu .='<ul><li><a href="'.$catlink.'">'.$cat->name.'</a></li></ul>';
+			}
+			
+			}
+			}
+			else
+			{
 			foreach ($cat_tax as $cat)
 			{
 			$catlink=esc_url(get_category_link($cat->term_id));
@@ -159,6 +205,7 @@ $menu .='<div id="navigation"><ul>';
 			$menu .='<li><a href="'.$catlink.'">'.$cat->name.'</a></li>';
 			}
 			
+			}
 			}
 
 

@@ -30,6 +30,8 @@ Show All Categories in Verticall Drop&down menu.
 <a href="http://ctboard.com/vmenu.html">Screens</a>
 
 == Changelog ==
+= 1.1.3 =
+ * Add Simple Accordion Theme
 = 1.0.3 =
  * Improve CSS
  * Improve PHP Codes
