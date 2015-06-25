@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: pctricks.ir
-Donate link: http://ctboard.com/
+Donate link: http://donate.shiraali.com/
 Tags: menu, CSS3 menu,Drop&Down Menu,mybb
 Requires at least: 3.0.1
 Tested up to: 4.2.2
