@@ -1,54 +1,191 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: mybblastinfo\n"
-"POT-Creation-Date: 2015-04-11 16:44+0330\n"
-"PO-Revision-Date: 2015-04-11 16:44+0330\n"
-"Last-Translator: Mostafa <mr.mostafa.shiraali@gmail.com>\n"
-"Language-Team: Mostafa Shiraali <admin@pctricks.ir>\n"
-"Language: fa_IR\n"
+"Project-Id-Version: Vertical Menu\n"
+"POT-Creation-Date: 2015-06-25 05:41+0330\n"
+"PO-Revision-Date: 2015-06-25 05:42+0330\n"
+"Last-Translator: \n"
+"Language-Team: Mostafa Shiraali <mr.mostafa.shiraali@gmail.com>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.4\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: vmenu.php:34
+#: vmenu.php:49
 msgid "Vertical menu"
 msgstr "فهرست عمودی"
 
-#: vmenu.php:40
+#: vmenu.php:55
 msgid "Vertical menu Option"
 msgstr "تنظیمات فهرست عمودی"
 
-#: vmenu.php:45
+#: vmenu.php:60
 msgid "Menu Direction"
 msgstr "جهت فهرست"
 
-#: vmenu.php:46
+#: vmenu.php:61
 msgid "Select Menu Direction"
 msgstr "جهت فهرست را انتخاب نمایید"
 
-#: vmenu.php:55
+#: vmenu.php:70
 msgid "Menu Theme"
 msgstr "پوسته فهرست"
 
-#: vmenu.php:56
+#: vmenu.php:71
 msgid "Select Menu theme"
 msgstr "پوسته فهرست را انتخاب نمایید"
 
-#: vmenu.php:109
+#: vmenu.php:192
 msgid "Title :"
 msgstr "عنوان :"
 
-#: vmenu.php:114 vmenu.php:115
+#: vmenu.php:197 vmenu.php:198
 msgid "Vertical Menu Widget"
 msgstr "ابزارک فهرست عمودی"
 
-#~ msgid "Vertical Menu"
-#~ msgstr "فهرست عمودی"
+#~ msgid "Seo Tags"
+#~ msgstr "برچسب های سئو"
+
+#~ msgid "Seo Tags Widget"
+#~ msgstr "ابزارک های برچسب سئو"
+
+#~ msgid "Seo Tags Option"
+#~ msgstr "تنظیمات برچسب های سئو"
+
+#~ msgid "Keywords Engine"
+#~ msgstr "موتور برچسب ها"
+
+#~ msgid "Select Keywords Engine(If Select Both Loading time is more)"
+#~ msgstr ""
+#~ "یک موتور را انتخاب نمایید (اگر حالت هر دو را انتخاب نمایید ممکن است چند "
+#~ "لحظه بارگذاری سایت افزایش یابد)"
+
+#~ msgid "Google.com"
+#~ msgstr "Google.com"
+
+#~ msgid "Bing.com"
+#~ msgstr "Bing.com"
+
+#~ msgid "Both"
+#~ msgstr "هر دو"
+
+#~ msgid "Number of Keyword"
+#~ msgstr "تعداد برچسب ها"
+
+#~ msgid ""
+#~ "Select Number of Keyword,I recommend you choose Normal.(If Select alot "
+#~ "Loading time is more)"
+#~ msgstr ""
+#~ "تعداد برچسب ها را انتخاب نمایید ، پیشنهاد می کنم حالت معمولی را انتخاب "
+#~ "نمایید"
+
+#~ msgid "normal"
+#~ msgstr "معمولی"
+
+#~ msgid "High"
+#~ msgstr "زیاد"
+
+#~ msgid "Keywords Theme"
+#~ msgstr "قالب برچسب ها"
+
+#~ msgid "Select Keywords theme"
+#~ msgstr "قالب کلمات کلیدی را وارد نمایید"
+
+#~ msgid "3D Tag Cloud"
+#~ msgstr "ابر برچسب 3D"
+
+#~ msgid ""
+#~ "You Can Change 3D Tag Cloud Theme Option From Here(<a href=\"http://www."
+#~ "goat1000.com/tagcanvas-options.php\" target=\"_blank\">Option "
+#~ "Description</a>)"
+#~ msgstr ""
+#~ "شما می توانید تنظیمات پلاگین 3D Tag Cloud را از اینجا تغییر دهید برای "
+#~ "خواندن توضیحات پلاگین <a href=\"http://www.goat1000.com/tagcanvas-options."
+#~ "php\" target=\"_blank\">اینجا را بخوانید</a> "
+
+#~ msgid "Wordpress Information Options"
+#~ msgstr "تنظیمات اطلاعات وردپرس"
+
+#~ msgid "Number Registered Today"
+#~ msgstr "تعداد عضویت امروز"
+
+#~ msgid "Do You Want Show Number of Today Register?"
+#~ msgstr "آیا می خواهید تعداد عضویت امروز را نمایش دهد؟"
+
+#~ msgid "Number Registered yesterday"
+#~ msgstr "تعداد عضویت دیروز"
+
+#~ msgid "Do You Want Show Number of yesterday Register?"
+#~ msgstr "آیا می خواهید تعداد عضویت دیروز را نمایش دهد؟"
+
+#~ msgid "Number of All User"
+#~ msgstr "تعداد کاربران"
+
+#~ msgid "Do You Want Show Number of All User?"
+#~ msgstr "آیا می خواهید تعداد کاربران را نمایش دهد؟"
+
+#~ msgid "Number of Today Comments"
+#~ msgstr "تعداد نظرات امروز"
+
+#~ msgid "Do You Want Show Number of Today Comments?"
+#~ msgstr "آیا می خواهید تعداد نظرات امروز نمایش داده شود؟"
+
+#~ msgid "Number of All Comments"
+#~ msgstr "تعداد همه نظرات"
+
+#~ msgid "Do You Want Show Number of All Comments?"
+#~ msgstr "آیا می خواهید تعداد همه نظرات نمایش داده شود؟"
+
+#~ msgid "Number of Articles"
+#~ msgstr "تعداد پست ها"
+
+#~ msgid "Do You Want Show Number of Articles?"
+#~ msgstr "آیا می خواهید تعداد پست ها نمایش داده شود؟"
+
+#~ msgid "Last User"
+#~ msgstr "آخرین کاربر"
+
+#~ msgid "Do You Want Show Last User?"
+#~ msgstr "آیا می خواهید آخرین کاربر را نمایش دهد؟"
+
+#~ msgid "WP Info Widget"
+#~ msgstr "ابزارک اطلاعات وردپرس"
+
+#~ msgid "WP Stat Widget"
+#~ msgstr "ابزارک اطلاعات وردپرس"
+
+#~ msgid "Online Users"
+#~ msgstr "کاربران آنلاین"
+
+#~ msgid "Today Visit"
+#~ msgstr "بازدید امروز"
+
+#~ msgid "Week Visit"
+#~ msgstr "بازدید هفته"
+
+#~ msgid "Month Visit"
+#~ msgstr "بازدید ماه"
+
+#~ msgid "Year Visit"
+#~ msgstr "بازدید سال"
+
+#~ msgid "All Visit"
+#~ msgstr "بازدید کل"
+
+#~ msgid "Simple Stat Widget"
+#~ msgstr "ابزارک آمار ساده"
+
+#~ msgid "Send Email To Users"
+#~ msgstr "ارسال ایمیل به کاربران"
+
+#~ msgid "Email Sender"
+#~ msgstr "ارسال کننده ایمیل"
 
 #~ msgid "Mybb Last Information"
 #~ msgstr "آخرین اطلاعات انجمن ساز مای بی بی "
@@ -57,7 +194,9 @@ msgstr "ابزارک فهرست عمودی"
 #~ msgstr "اطلاعات مای بی بی"
 
 #~ msgid "Mybb Last Information Options"
-#~ msgstr "تنظیمات آخرین اطلاعات مای بی بی (ساخته شده توسط <a href=\"http://pctricks.ir\" target=\"_blamk\">Mostafa</a> ) "
+#~ msgstr ""
+#~ "تنظیمات آخرین اطلاعات مای بی بی (ساخته شده توسط <a href=\"http://pctricks."
+#~ "ir\" target=\"_blamk\">Mostafa</a> ) "
 
 #~ msgid "Host of Mybb"
 #~ msgstr "هاست مای بی بی"
@@ -158,9 +297,6 @@ msgstr "ابزارک فهرست عمودی"
 #~ msgid "Posts"
 #~ msgstr "ارسال ها"
 
-#~ msgid "Banned Users"
-#~ msgstr "کاربران محروم"
-
 #~ msgid "User Groups"
 #~ msgstr "گروه های کاربری"
 
@@ -172,9 +308,6 @@ msgstr "ابزارک فهرست عمودی"
 
 #~ msgid "Last Post"
 #~ msgstr "آخرین ارسال ها"
-
-#~ msgid "Last User"
-#~ msgstr "آخرین کاربران"
 
 #~ msgid "Most viewed"
 #~ msgstr "مطالب محبوب"
