@@ -2,7 +2,7 @@
 	direction:ltr;/* Direction Group */
 	font-size:12px ;
 	font-family:Tahoma;
-    width:200px;
+max-width: 100%;
 }
 #navigation ul{
 	margin:0px;
@@ -55,5 +55,8 @@ ul.sub-menu li {
     float:right;
     width:200px;
 }
-
+#navigation > ul > li > ul{margin: 0px 0px 0px 16%;}
+@media screen and (min-device-width:600px) and (max-width: 1024px) {
+#navigation > ul > li > ul{margin: 0px 0px 0px -10.5%;}
+}
 
