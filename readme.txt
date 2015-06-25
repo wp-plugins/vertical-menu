@@ -10,9 +10,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Show All Categories in Verticall Drop&down menu.
 == Description ==
- * Show All Categories With All Sub-Category.
- * You Can Change Direction
- * You Can Select 12 theme
+Show All Categories With All Sub-Category.
+You Can Change Direction
+You Can Select 13 theme
+Drop&down And Accordion Theme
  
  <a href="http://ctboard.com/">Live Demo</a>
 
