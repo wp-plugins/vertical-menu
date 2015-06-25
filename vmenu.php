@@ -185,7 +185,7 @@ $vmw_theme=get_option('vmw_theme');
 			}
 			else
 			{
-			$menu .='<ul><li><a href="'.$catlink.'">'.$cat->name.'</a></li></ul>';
+			$menu .='<ul id="'.$cat->term_id.'"><li><a href="#'.$cat->term_id.'">'.$cat->name.'</a></li><li><a href="'.$catlink.'">'.$cat->name.'</a></li></ul>';
 			}
 			
 			}
