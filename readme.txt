@@ -8,8 +8,10 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Show All Categories in Verticall Drop&down menu.
+Show All Categories in Verticall menu.
 == Description ==
+Show All Categories in Verticall menu.
+= Features:  =
 * Show All Categories With All Sub-Category.
 * You Can Change Direction
 * You Can Select 13 theme
