@@ -3,7 +3,7 @@
 Plugin Name: Vertical menu
 Plugin URI: http://ctboard.com/
 Description: This Plugin Show All Categories In Vertical menu Widget.
-Version: 1.1.4
+Version: 1.1.5
 Author: <a href="http://ctboard.com/">Mostafa Shiraali</a>
 Author URI: http://ctboard.com/
 License: A "Slug" license name e.g. GPL2
@@ -168,7 +168,7 @@ $vmw_theme=get_option('vmw_theme');
 			{
 			$menu .='<div id="navigation"><ul>';
 			}
- $cat_tax = $wpdb->get_results("SELECT $wpdb->term_taxonomy.term_id,$wpdb->terms.name
+ $cat_tax = $wpdb->get_results("SELECT $wpdb->term_taxonomy.term_id,$wpdb->terms.name,$wpdb->terms.slug
 										FROM $wpdb->term_taxonomy
 										INNER JOIN $wpdb->terms
 										WHERE $wpdb->term_taxonomy.term_id=$wpdb->terms.term_id AND $wpdb->term_taxonomy.taxonomy = 'category' AND $wpdb->term_taxonomy.parent = '0'
@@ -181,11 +181,11 @@ $vmw_theme=get_option('vmw_theme');
 			$parent = $wpdb->get_results("SELECT * FROM $wpdb->term_taxonomy WHERE taxonomy = 'category' AND parent = $cat->term_id");
 			if($parent)
 			{
-			$menu .='<ul id="'.$cat->term_id.'"><li><a href="#'.$cat->term_id.'" id="'.$catlink.'">'.$cat->name.'</a></li><li><a href="'.$catlink.'">'.$cat->name.'</a></li>'.VerticalMenu::sublevel($cat->term_id).'</ul>';
+			$menu .='<ul id="'.$cat->slug.'"><li><a href="#'.$cat->slug.'" id="'.$catlink.'">'.$cat->name.'</a></li><li><a href="'.$catlink.'">'.$cat->name.'</a></li>'.VerticalMenu::sublevel($cat->term_id).'</ul>';
 			}
 			else
 			{
-			$menu .='<ul id="'.$cat->term_id.'"><li><a href="#'.$cat->term_id.'">'.$cat->name.'</a></li><li><a href="'.$catlink.'">'.$cat->name.'</a></li></ul>';
+			$menu .='<ul id="'.$cat->slug.'"><li><a href="#'.$cat->slug.'">'.$cat->name.'</a></li><li><a href="'.$catlink.'">'.$cat->name.'</a></li></ul>';
 			}
 			
 			}
