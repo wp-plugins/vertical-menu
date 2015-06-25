@@ -3,7 +3,7 @@
 Plugin Name: Vertical menu
 Plugin URI: http://ctboard.com/
 Description: This Plugin Show All Categories In Vertical menu Widget.
-Version: 1.1.3
+Version: 1.1.4
 Author: <a href="http://ctboard.com/">Mostafa Shiraali</a>
 Author URI: http://ctboard.com/
 License: A "Slug" license name e.g. GPL2
