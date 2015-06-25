@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: pctricks.ir
-Donate link: http://pctricks.ir/
+Donate link: http://ctboard.com/
 Tags: menu, CSS3 menu,Drop&Down Menu,mybb
 Requires at least: 3.0.1
-Tested up to: 4.1.1
+Tested up to: 4.2.2
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,7 +14,7 @@ Show All Categories in Verticall Drop&down menu.
  * You Can Change Direction
  * You Can Select 12 theme
  
- <a href="http://pctricks.ir/">Live Demo</a>
+ <a href="http://ctboard.com/">Live Demo</a>
 
 == Installation ==
 
@@ -27,10 +27,12 @@ Show All Categories in Verticall Drop&down menu.
 
 == Screenshots ==
 
-<a href="http://pctricks.ir/vmenu.html">Screens</a>
+<a href="http://ctboard.com/vmenu.html">Screens</a>
 
 == Changelog ==
-
-= 1.0 =
+= 1.0.3 =
+ * Improve CSS
+ * Improve PHP Codes
+= 1.0.0 =
  * ADD Change Direction Option
  * ADD 12 theme.
